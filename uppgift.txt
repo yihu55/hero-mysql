@@ -1,0 +1,32 @@
+Dag 8
+Hjältar
+Skriv en Express-applikation där man kan spara och visa information om hjältar. All information om hjältarna ska lagras i MongoDB. Använd Express-templates för att generera HTML.
+
+Applikationen ska ha följande funktionalitet:
+
+Skapa hjältar
+Det ska gå att lägga till nya hjältar i applikationen. Detta görs med ett formulär där användaren får mata in olika hjältemodiga egenskaper, t.ex. namn, ålder, favoritmat, styrka, intelligens, med mera.
+
+Formuläret ska sparas genom att göra en POST mot en endpoint som heter /heroes.
+
+Lista hjältar
+Gör man en GET mot "/" ska en översiktsvy med hjältar visas. Klickar man på en hjälte ska man komma till en detaljvy om hjälten.
+
+Detaljvy
+Gör man en GET mot "/heroes/:id" ska hjälten vars _id är samma som :id-parametern visas. I detaljvyn ska all tillgänglig information om en hjälte visas. 
+
+Om det inte finns någon hjälte med det givna ID:t ska användaren få ett 404-svar tillbaka (slå upp hur man gör det med Express!)
+
+Hjältar - fortsättning
+Se till att varje hjälte är kopplad till en Location, som representerar den plats där hjälten just nu befinner sig.
+
+Skapa och lista platser
+Se först till att man kan skapa Locations, genom att göra en POST till /locations. En plats kan innehålla valfri information, men ska som minst ha ett namn.
+
+Samma endpoint ska även lista alla platser om man gör en GET.
+
+Flytta hjältar
+Gör så att man kan flytta på en hjälte genom att lägga till ett formulär på /heroes/:id-vyn. Formuläret ska innehålla en drop-down med alla befintliga platser; skickar man formuläret ska hjälten kopplas till den valda platsen.
+
+Detaljvy för platser
+Lägg till en detaljvy för platser på /locations/:id som visar information om den valda platsen samt en lista på hjältar som befinner sig där just nu.
